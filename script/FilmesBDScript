@@ -1,0 +1,41 @@
+create database filmes;
+
+use filmes;
+
+create table autors (
+  id int auto_increment not null primary key,
+  first_name varchar(20),
+  last_name varchar(20)
+);
+
+create table filmes (
+  id int auto_increment not null primary key,
+  title varchar(32)
+  description varchar(255)
+  synopsis varchar(255)
+  link_img varchar(255)
+);
+
+create table filmes_autor (
+  id int auto_increment not null primary key,
+  filme_id int not null,
+  autor_id int not null,
+  foreign key (autor_id) references autors(id),
+  foreign key (filme_id) references filmes(id)
+);
+
+
+insert into autors (first_name, last_name) values ('Nome 1', 'Sobrenome 1');
+insert into autors (first_name, last_name) values ('Nome 2', 'Sobrenome 2');
+insert into autors (first_name, last_name) values ('Nome 3', 'Sobrenome 4');
+insert into autors (first_name, last_name) values ('Nome 4', 'Sobrenome 4');
+
+insert into filmes (title, description, synopsis, link_img) values ('Up - Altas Aventuras', 'descrição do filme', 'sinopse do filme', 'link da imagem');
+insert into filmes (title, description, synopsis, link_img) values ('Vingadores Ultimato', 'descrição do filme', 'sinopse do filme', 'link da imagem');
+insert into filmes (title, description, synopsis, link_img) values ('A teoria de tudo', 'descrição do filme', 'sinopse do filme', 'link da imagem');
+insert into filmes (title, description, synopsis, link_img) values ('A fantastica fabrica de chocolate', 'descrição do filme', 'sinopse do filme', 'link da imagem');
+
+insert into filmes_autor (filme_id, autor_id) values (1, 3);
+insert into filmes_autor (filme_id, autor_id) values (2, 2);
+insert into filmes_autor (filme_id, autor_id) values (3, 1);
+insert into filmes_autor (filme_id, autor_id) values (4, 4);
