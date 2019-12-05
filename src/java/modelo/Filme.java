@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package modelo;
 
 /**
@@ -11,7 +10,7 @@ package modelo;
  * @author marcelosiedler
  */
 public class Filme {
-    
+
     private int id;
     private String title;
     private String description;
@@ -57,5 +56,5 @@ public class Filme {
     public void setLink_img(String link_img) {
         this.link_img = link_img;
     }
-   
+
 }
