@@ -10,9 +10,9 @@ create table autors (
 
 create table filmes (
   id int auto_increment not null primary key,
-  title varchar(32)
-  description varchar(255)
-  synopsis varchar(255)
+  title varchar(32),
+  description varchar(255),
+  synopsis varchar(255),
   link_img varchar(255)
 );
 
